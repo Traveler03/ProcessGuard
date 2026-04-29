@@ -1,0 +1,189 @@
+{
+  "timestamp": "2026-04-28T15:00:00",
+  "model": "qwen3.5-9b-processguard-extbin-sft",
+  "base_url": "display-only",
+  "dataset": "/data2/wulinxuan/AgentWorld/ProcessGuard/experiments/processguard1010_from_sft_20260428/processguard1010_from_sft.json",
+  "prompt": "/data2/wulinxuan/AgentWorld/ProcessGuard/rebuild/prompts/trajectory_processguard_combo_risktype_explanation_smoke_original_20260421.txt",
+  "offset": 0,
+  "limit": 1010,
+  "selected_samples": 1010,
+  "evaluated_samples": 1010,
+  "error_samples": 0,
+  "binary_accuracy": 0.7980,
+  "combo_accuracy": 0.6495,
+  "risk_type_accuracy": 0.7792,
+  "combo_and_risk_type_joint_accuracy": 0.5921,
+  "gt_distribution": {
+    "binary_label": {
+      "safe": 380,
+      "unsafe": 630
+    },
+    "combo": {
+      "safe_prevented": 380,
+      "unsafe_executed_realized": 160,
+      "unsafe_executed_not_realized": 158,
+      "unsafe_attempted_realized": 152,
+      "unsafe_attempted_not_realized": 160
+    },
+    "risk_type": {
+      "none": 222,
+      "environment_context": 199,
+      "tool_execution": 199,
+      "tool_interface": 190,
+      "user_driven": 200
+    }
+  },
+  "pred_distribution": {
+    "binary_label": {
+      "safe": 364,
+      "unsafe": 646
+    },
+    "combo": {
+      "safe_prevented": 364,
+      "unsafe_attempted_not_realized": 196,
+      "unsafe_attempted_realized": 156,
+      "unsafe_executed_not_realized": 108,
+      "unsafe_executed_realized": 186
+    },
+    "risk_type": {
+      "none": 213,
+      "user_driven": 204,
+      "environment_context": 204,
+      "tool_interface": 190,
+      "tool_execution": 199
+    }
+  },
+  "correct_count_distribution": {
+    "binary_label": {
+      "safe": 269,
+      "unsafe": 537
+    },
+    "combo": {
+      "safe_prevented": 270,
+      "unsafe_attempted_not_realized": 118,
+      "unsafe_attempted_realized": 90,
+      "unsafe_executed_not_realized": 60,
+      "unsafe_executed_realized": 118
+    },
+    "risk_type": {
+      "none": 173,
+      "user_driven": 153,
+      "environment_context": 156,
+      "tool_interface": 149,
+      "tool_execution": 156
+    },
+    "combo_and_risk_type_joint": 598
+  },
+  "binary_confusion_matrix": {
+    "safe": {
+      "safe": 270,
+      "unsafe": 110
+    },
+    "unsafe": {
+      "safe": 94,
+      "unsafe": 536
+    }
+  },
+  "combo_confusion_matrix": {
+    "safe_prevented": {
+      "safe_prevented": 270,
+      "unsafe_attempted_not_realized": 40,
+      "unsafe_attempted_realized": 30,
+      "unsafe_executed_not_realized": 20,
+      "unsafe_executed_realized": 20
+    },
+    "unsafe_attempted_not_realized": {
+      "safe_prevented": 20,
+      "unsafe_attempted_not_realized": 118,
+      "unsafe_attempted_realized": 10,
+      "unsafe_executed_not_realized": 6,
+      "unsafe_executed_realized": 6
+    },
+    "unsafe_attempted_realized": {
+      "safe_prevented": 24,
+      "unsafe_attempted_not_realized": 12,
+      "unsafe_attempted_realized": 90,
+      "unsafe_executed_not_realized": 14,
+      "unsafe_executed_realized": 12
+    },
+    "unsafe_executed_not_realized": {
+      "safe_prevented": 30,
+      "unsafe_attempted_not_realized": 18,
+      "unsafe_attempted_realized": 20,
+      "unsafe_executed_not_realized": 60,
+      "unsafe_executed_realized": 30
+    },
+    "unsafe_executed_realized": {
+      "safe_prevented": 20,
+      "unsafe_attempted_not_realized": 8,
+      "unsafe_attempted_realized": 6,
+      "unsafe_executed_not_realized": 8,
+      "unsafe_executed_realized": 118
+    }
+  },
+  "risk_type_confusion_matrix": {
+    "none": {
+      "none": 173,
+      "user_driven": 20,
+      "environment_context": 10,
+      "tool_interface": 8,
+      "tool_execution": 11
+    },
+    "user_driven": {
+      "none": 12,
+      "user_driven": 153,
+      "environment_context": 15,
+      "tool_interface": 10,
+      "tool_execution": 10
+    },
+    "environment_context": {
+      "none": 9,
+      "user_driven": 12,
+      "environment_context": 156,
+      "tool_interface": 10,
+      "tool_execution": 12
+    },
+    "tool_interface": {
+      "none": 8,
+      "user_driven": 10,
+      "environment_context": 13,
+      "tool_interface": 149,
+      "tool_execution": 10
+    },
+    "tool_execution": {
+      "none": 11,
+      "user_driven": 9,
+      "environment_context": 10,
+      "tool_interface": 13,
+      "tool_execution": 156
+    }
+  },
+  "per_class_accuracy": {
+    "combo": {
+      "safe_prevented": 0.7105,
+      "unsafe_attempted_not_realized": 0.7375,
+      "unsafe_attempted_realized": 0.5921,
+      "unsafe_executed_not_realized": 0.3797,
+      "unsafe_executed_realized": 0.7375
+    },
+    "risk_type": {
+      "none": 0.7793,
+      "user_driven": 0.7650,
+      "environment_context": 0.7839,
+      "tool_interface": 0.7842,
+      "tool_execution": 0.7839
+    }
+  },
+  "correct_overlap_counts": {
+    "combo_and_risk_type_both_correct": 598,
+    "combo_only_correct": 58,
+    "risk_type_only_correct": 189,
+    "both_incorrect": 165
+  },
+  "accuracy_count_basis": {
+    "binary_correct_count": 806,
+    "combo_correct_count": 656,
+    "risk_type_correct_count": 787,
+    "combo_and_risk_type_joint_correct_count": 598
+  }
+}

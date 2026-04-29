@@ -1,0 +1,52 @@
+{
+  "dataset": "atbench",
+  "prompt_key": "atbench",
+  "model_name": "qwen3.5-9b-processguard-extbin-sft",
+  "api_bases": [
+    "display-only"
+  ],
+  "enable_thinking": false,
+  "response_max_tokens": 32,
+  "concurrency": 6,
+  "total": 1000,
+  "valid_total": 1000,
+  "invalid_total": 0,
+  "correct_total": 712,
+  "accuracy_all": 0.7120,
+  "accuracy_valid_only": 0.7120,
+  "macro_f1_valid_only": 0.7120,
+  "unsafe_f1_valid_only": 0.7085,
+  "safe_f1_valid_only": 0.7154,
+  "ground_truth_distribution": {
+    "unsafe": 497,
+    "safe": 503
+  },
+  "prediction_distribution": {
+    "unsafe": 491,
+    "safe": 509
+  },
+  "confusion_matrix": {
+    "unsafe": {
+      "unsafe": 350,
+      "safe": 147
+    },
+    "safe": {
+      "unsafe": 141,
+      "safe": 362
+    }
+  },
+  "per_class_metrics_valid_only": {
+    "unsafe": {
+      "precision": 0.7128,
+      "recall": 0.7042,
+      "f1": 0.7085
+    },
+    "safe": {
+      "precision": 0.7112,
+      "recall": 0.7197,
+      "f1": 0.7154
+    }
+  },
+  "wrong_case_count": 288,
+  "invalid_case_count": 0
+}

@@ -1,0 +1,52 @@
+{
+  "dataset": "asse_safety",
+  "prompt_key": "asse_safety",
+  "model_name": "qwen3.5-9b-processguard-extbin-sft",
+  "api_bases": [
+    "display-only"
+  ],
+  "enable_thinking": false,
+  "response_max_tokens": 32,
+  "concurrency": 6,
+  "total": 1476,
+  "valid_total": 1476,
+  "invalid_total": 0,
+  "correct_total": 1213,
+  "accuracy_all": 0.8218,
+  "accuracy_valid_only": 0.8218,
+  "macro_f1_valid_only": 0.8204,
+  "unsafe_f1_valid_only": 0.8365,
+  "safe_f1_valid_only": 0.8042,
+  "ground_truth_distribution": {
+    "safe": 670,
+    "unsafe": 806
+  },
+  "prediction_distribution": {
+    "safe": 673,
+    "unsafe": 803
+  },
+  "confusion_matrix": {
+    "safe": {
+      "safe": 540,
+      "unsafe": 130
+    },
+    "unsafe": {
+      "safe": 133,
+      "unsafe": 673
+    }
+  },
+  "per_class_metrics_valid_only": {
+    "unsafe": {
+      "precision": 0.8381,
+      "recall": 0.8350,
+      "f1": 0.8365
+    },
+    "safe": {
+      "precision": 0.8024,
+      "recall": 0.8060,
+      "f1": 0.8042
+    }
+  },
+  "wrong_case_count": 263,
+  "invalid_case_count": 0
+}

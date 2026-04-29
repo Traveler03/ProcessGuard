@@ -1,0 +1,45 @@
+{
+  "input": "benchmark/binary_eval/sft_qwen35_9b_atbench_asse1600/accepted_pool_10042_with_atbench_asse_qwen35_9b_1600_gpt54_annotated_20260420.jsonl",
+  "source_run": "processguard_10042_qwen35_9b_sft",
+  "seed": 11,
+  "val_ratio": 0.02,
+  "drop_empty_combo": true,
+  "train": {
+    "rows": 9832,
+    "combo_distribution": {
+      "unsafe_executed_realized": 2466,
+      "safe_prevented": 2441,
+      "unsafe_attempted_realized": 1718,
+      "unsafe_attempted_not_realized": 1461,
+      "unsafe_executed_not_realized": 1746
+    },
+    "risk_distribution": {
+      "tool_execution": 1943,
+      "none": 771,
+      "environment_context": 2313,
+      "user_driven": 2652,
+      "tool_interface": 2153
+    },
+    "num_strata": 21
+  },
+  "val": {
+    "rows": 201,
+    "combo_distribution": {
+      "safe_prevented": 50,
+      "unsafe_attempted_realized": 34,
+      "unsafe_attempted_not_realized": 31,
+      "unsafe_executed_realized": 50,
+      "unsafe_executed_not_realized": 36
+    },
+    "risk_distribution": {
+      "user_driven": 54,
+      "tool_interface": 44,
+      "environment_context": 48,
+      "tool_execution": 39,
+      "none": 16
+    },
+    "num_strata": 21
+  },
+  "train_path": "benchmark/sft_train/qwen35_9b_processguard10k_sft_v2_20260420/train.jsonl",
+  "val_path": "benchmark/sft_train/qwen35_9b_processguard10k_sft_v2_20260420/val.jsonl"
+}

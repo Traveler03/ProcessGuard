@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-04-28T14:26:44",
+  "model": "gpt-5.4",
+  "base_url": "https://fushengyunsuan.cn/v1",
+  "dataset": "/data2/wulinxuan/AgentWorld/ProcessGuard/experiments/processguard1010_from_sft_20260428/processguard1010_from_sft.json",
+  "prompt": "/data2/wulinxuan/AgentWorld/ProcessGuard/rebuild/prompts/trajectory_processguard_combo_risktype_explanation_smoke_original_20260421.txt",
+  "offset": 0,
+  "limit": 1010,
+  "selected_samples": 1010,
+  "evaluated_samples": 1010,
+  "error_samples": 0,
+  "binary_accuracy": 0.7643564356435644,
+  "combo_accuracy": 0.5772277227722772,
+  "risk_type_accuracy": 0.7316831683168317,
+  "combo_and_risk_type_joint_accuracy": 0.5247524752475248,
+  "gt_distribution": {
+    "combo": {
+      "safe_prevented": 380,
+      "unsafe_executed_realized": 160,
+      "unsafe_executed_not_realized": 158,
+      "unsafe_attempted_realized": 152,
+      "unsafe_attempted_not_realized": 160
+    },
+    "risk_type": {
+      "none": 222,
+      "environment_context": 199,
+      "tool_execution": 199,
+      "tool_interface": 190,
+      "user_driven": 200
+    }
+  },
+  "pred_distribution": {
+    "combo": {
+      "safe_prevented": 144,
+      "unknown": 77,
+      "unsafe_executed_realized": 364,
+      "unsafe_attempted_realized": 68,
+      "unsafe_executed_not_realized": 153,
+      "unsafe_attempted_not_realized": 204
+    },
+    "risk_type": {
+      "none": 75,
+      "unknown": 77,
+      "tool_interface": 199,
+      "user_driven": 243,
+      "tool_execution": 235,
+      "environment_context": 181
+    }
+  },
+  "per_class_accuracy": {
+    "combo": {
+      "safe_prevented": 0.3763157894736842,
+      "unsafe_attempted_not_realized": 0.7125,
+      "unsafe_attempted_realized": 0.4342105263157895,
+      "unsafe_executed_not_realized": 0.6772151898734177,
+      "unsafe_executed_realized": 0.95625
+    },
+    "risk_type": {
+      "none": 0.32882882882882886,
+      "user_driven": 0.77,
+      "environment_context": 0.7587939698492462,
+      "tool_interface": 0.9105263157894737,
+      "tool_execution": 0.9447236180904522
+    }
+  },
+  "non_empty_explanation_rate": 0.9237623762376238,
+  "avg_explanation_word_count": 33.40514469453376,
+  "mismatch_count": 490,
+  "concurrency": 4
+}

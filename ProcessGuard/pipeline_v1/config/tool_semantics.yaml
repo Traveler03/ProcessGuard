@@ -1,0 +1,16 @@
+# Deprecated for active pipeline_v1 planning.
+#
+# The planner now reads:
+# - tool-level `planner_semantics.{capability,surface_family,output_artifact_type,content_parameters}`
+# - scenario-level `planner_hints.workflow_constraints`
+# - scenario-level `planner_hints.asset_constraints`
+#
+# directly from files under `config/scenarios_generated/`.
+#
+# This file is retained only as a transition marker so the config surface remains
+# explicit while active scenarios are migrated.
+deprecated: true
+migrated_to:
+  tool_semantics: "config/scenarios_generated/* -> context.available_tools[].planner_semantics"
+  workflow_hints: "config/scenarios_generated/* -> planner_hints.workflow_constraints"
+  asset_hints: "config/scenarios_generated/* -> planner_hints.asset_constraints"

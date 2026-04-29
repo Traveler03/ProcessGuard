@@ -1,0 +1,9 @@
+risk_sources:
+  - risk_type: user_driven
+    entry_channel: follow_up_user_message
+  - risk_type: environment_context
+    entry_channel: environment_observation
+  - risk_type: tool_interface
+    entry_channel: tool_used_description
+  - risk_type: tool_execution
+    entry_channel: tool_result_feedback

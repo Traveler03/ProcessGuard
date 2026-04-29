@@ -1,0 +1,71 @@
+{
+  "created_at": "2026-04-27",
+  "parent_benchmark": "/data2/wulinxuan/AgentWorld/benchmark/processguard_eval/processguard1000_final_benchmark.json",
+  "new_benchmark_json": "/data2/wulinxuan/AgentWorld/benchmark/processguard_eval/processguard1010_final_benchmark.json",
+  "new_benchmark_json_dated": "/data2/wulinxuan/AgentWorld/benchmark/processguard_eval/processguard1010_final_benchmark_20260427.json",
+  "new_benchmark_jsonl": "/data2/wulinxuan/AgentWorld/benchmark/processguard_eval/processguard1010_final_benchmark.jsonl",
+  "added_rows_json": "/data2/wulinxuan/AgentWorld/benchmark/processguard_eval/processguard1010_added10_from_sft_20260427.json",
+  "selection_seed": 20260427,
+  "source_sft_paths": [
+    "/data2/wulinxuan/AgentWorld/benchmark/sft_train/qwen35_9b_processguard10k_sft_v2_with_explanation_20260420/train.jsonl",
+    "/data2/wulinxuan/AgentWorld/benchmark/sft_train/qwen35_9b_processguard10k_sft_v2_with_explanation_20260420/val.jsonl"
+  ],
+  "selection_policy": "random exact-marginal match against target combo/risk distributions for a 10-row extension; excluded external_sft1600/test rows",
+  "target_added_combo_distribution": {
+    "safe_prevented": 3,
+    "unsafe_attempted_not_realized": 2,
+    "unsafe_attempted_realized": 1,
+    "unsafe_executed_not_realized": 2,
+    "unsafe_executed_realized": 2
+  },
+  "target_added_risk_distribution": {
+    "none": 3,
+    "user_driven": 2,
+    "tool_execution": 2,
+    "environment_context": 2,
+    "tool_interface": 1
+  },
+  "added_count": 10,
+  "base_count": 1000,
+  "final_count": 1010,
+  "added_combo_distribution": {
+    "unsafe_executed_realized": 2,
+    "safe_prevented": 3,
+    "unsafe_attempted_not_realized": 2,
+    "unsafe_executed_not_realized": 2,
+    "unsafe_attempted_realized": 1
+  },
+  "added_risk_distribution": {
+    "environment_context": 2,
+    "none": 3,
+    "tool_execution": 2,
+    "user_driven": 2,
+    "tool_interface": 1
+  },
+  "final_combo_distribution": {
+    "safe_prevented": 322,
+    "unsafe_executed_realized": 186,
+    "unsafe_executed_not_realized": 171,
+    "unsafe_attempted_realized": 163,
+    "unsafe_attempted_not_realized": 168
+  },
+  "final_risk_distribution": {
+    "none": 316,
+    "environment_context": 175,
+    "tool_execution": 176,
+    "tool_interface": 166,
+    "user_driven": 177
+  },
+  "added_conv_ids": [
+    "celebrity_lookalike_finder_sft10k__environment_context__unsafe_executed_realized__celebrity_lookalike_finder__00333_347a75fe",
+    "document_summarizer_sft2k__clean__document_summarizer__0051_ff5135d6",
+    "astrology_tarot_advisor_sft10k__tool_execution__unsafe_executed_realized__astrology_tarot_advisor__00213_9de8edca",
+    "automatic_birthday_anniversary_reminders_sft10k__tool_execution__unsafe_attempted_not_realized__automatic_birthday_anniversary_reminders__00412_5ac21d4e",
+    "parking_spot_finder_sft10k__user_driven__unsafe_attempted_not_realized__parking_spot_finder__00200_2abf3b79",
+    "code_explainer_sft10k__tool_interface__unsafe_executed_not_realized__code_explainer__00454_260e5eec",
+    "daily_briefing_bot_sft10k__environment_context__unsafe_attempted_realized__daily_briefing_bot__00445_0510e359",
+    "dating_social_coach_sft10k__user_driven__unsafe_executed_not_realized__dating_social_coach__00312_250228f6",
+    "lecture_transcriber_sft2k__clean__lecture_transcriber__0098_011be76a",
+    "chatbot_for_faqs_sft2k__clean__chatbot_for_faqs__0215_755d4665"
+  ]
+}
